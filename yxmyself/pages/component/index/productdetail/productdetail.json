@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "alertbox":"/pages/component/shoping/alertbox/alertbox"
+  }
+}

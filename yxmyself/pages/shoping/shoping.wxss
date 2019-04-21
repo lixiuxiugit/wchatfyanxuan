@@ -1,0 +1,149 @@
+/* pages/shoping/shoping.wxss */
+
+page {
+  height: 100%;
+}
+
+.shop {
+  background: #f4f4f4;
+  height: 100%;
+}
+
+.shop-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 26rpx 26rpx;
+  box-sizing: border-box;
+  background: #f4f4f4;
+}
+
+.flag {
+  width: 9rpx;
+  height: 9rpx;
+  border: 1rpx solid red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.shop-top view {
+  align-items: center;
+  display: flex;
+}
+
+.s-title {
+  font-size: 25rpx;
+  color: #666;
+  padding-left: 10rpx;
+}
+
+.s-item-r-l-l image {
+  height: 125rpx;
+  width: 125rpx;
+  display: block;
+  background: #f4f4f4;
+}
+
+.s-item-l {
+  background: url('http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-0e09baa37e.png') no-repeat center center;
+  width: 34rpx;
+  height: 34rpx;
+  background-size: 100% 100%;
+  margin: 0rpx 18rpx 0rpx 18rpx;
+}
+
+.s-item-r-l {
+  display: flex;
+  align-items: center;
+}
+
+.s-item-r-l-r {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-item-r-l-r text {
+  padding-left: 15rpx;
+  line-height: 40rpx;
+}
+
+.s-item-r {
+  flex: 1;
+  display: flex;
+  font-size: 25rpx;
+  /* color: #666; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0rpx 50rpx 0rpx;
+  border-bottom: solid 1rpx #f4f4f4;
+}
+
+.s-item-r-r text {
+  padding-right: 20rpx;
+}
+
+.active {
+  background: url('http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/checkbox-checked-822e54472a.png') no-repeat center center;
+  width: 34rpx;
+  height: 34rpx;
+  background-size: 100% 100%;
+  margin: 0rpx 18rpx 0rpx 18rpx;
+}
+
+.shoping {
+  background: #fff;
+}
+
+/* 底部 */
+
+/* .shop-bottom{
+
+} */
+.shop-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+}
+
+.shop-bottom-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.shop-bottom-l-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-bottom-l-l text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.shop-bottom-r {
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 29rpx;
+  background: #b4282d;
+  color: #fff;
+}
+
+.shop-bottom-l-r text {
+  color: #b4282d;
+  padding-right: 40rpx;
+  font-size: 28rpx;
+}

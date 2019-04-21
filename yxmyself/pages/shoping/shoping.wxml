@@ -1,0 +1,51 @@
+<!--pages/shoping/shoping.wxml-->
+<view class='shop'>
+  <!-- 描述 -->
+  <view class='shop-top'>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>30天无忧退货</text>
+    </view>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>48小时快速退款</text>
+    </view>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>满88免邮费</text>
+    </view>
+  </view>
+  <!-- 产品 -->
+  <view class='shoping'>
+    <view class="s-item" wx:for='{{ shoppingList}}' wx:for-item='item1' wx:for-index='index1'>
+      <view class="{{item1.isSelect?'active':'s-item-l'}}" bindtap='selected' data-index='{{index1}}'></view>
+      <view class='s-item-r'>
+        <view class='s-item-r-l'>
+          <view class='s-item-r-l-l'>
+            <image src='{{item1.list_pic_url}}'></image>
+          </view>
+          <view class='s-item-r-l-r'>
+            <text>{{item1.goods_name}}</text>
+            <text>￥{{item1.retail_price}}</text>
+          </view>
+        </view>
+        <view class='s-item-r-r'>
+          <text>X{{item1.number}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 全选 -->
+    <view class='shop-bottom'>
+      <view class='shop-bottom-l'>
+        <view class='shop-bottom-l-l'>
+          <view class='{{allSelect?"active":"s-item-l"}}' bindtap='selectAll'></view>
+          <text>全选({{allItem}})</text>
+        </view>
+        <view class='shop-bottom-l-r'>
+          <text>￥{{allMoney}}</text>
+        </view>
+      </view>
+      <view class='shop-bottom-r'>下单</view>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+/* pages/mine/mine.wxss */
+
+.header-pic image {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+}
+
+.header-pic {
+  padding-left: 36rpx;
+}
+
+.mi-top {
+  height: 280rpx;
+  background: #333;
+  display: flex;
+  align-items: center;
+}
+
+.discribe {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24rpx;
+}
+
+.discribe text {
+  color: #fff;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}

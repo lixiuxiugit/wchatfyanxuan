@@ -1,0 +1,11 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine'>
+   <view class='mi-top'>
+      <view class="header-pic"><image src='{{userInfo.avatarUrl}}'></image></view>
+      <view class='discribe'>
+        <text>{{userInfo.nickName}}</text>
+        <text>微信用户</text>
+      </view>
+   </view>
+   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"> 获取用户信息</button>
+</view>

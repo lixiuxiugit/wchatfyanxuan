@@ -1,0 +1,62 @@
+<!--pages/component/index/productdetail/productdetail.wxml-->
+
+<view class='productdetail'>
+  <!-- banner滚动图 -->
+  <view class='banner'>
+    <swiper autoplay='true' interval='1500' circular='true' indicator-dots='true'>
+      <swiper-item class='brand-item' wx:for='{{brandList}}' wx:for-item='item1' wx:for-index='index1'>
+        <image src="{{item1.img_url}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--描述-->
+  <view class='shop-top'>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>30天无忧退货</text>
+    </view>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>48小时快速退款</text>
+    </view>
+    <view>
+      <text class='flag'></text>
+      <text class='s-title'>满88免邮费</text>
+    </view>
+  </view>
+  <!-- 商品详情描述 -->
+  <view class='pro-discribe'>
+    <text class='pro-name'>{{info.name}}</text>
+    <text class='pro-discribe'>{{info.goods_brief}}</text>
+    <text class='pro-price'>￥{{info.retail_price}}</text>
+    <view class='sel-num' bindtap='showalertbox'>
+      <text>请选择产品规格数量</text>
+      <view class='pro-arrow-right'></view>
+    </view>
+  </view>
+  <!-- 引用弹出框组件 -->
+  <alertbox id='sm' isShow='{{isShowalertbox}}'></alertbox>
+  <!-- 底部购物车 -->
+  <view class='cart'>
+    <view class='cart-hb'>{{allnum}}</view>
+    <view class='cart-l'>
+      <view class='startt'>
+        <image class='star'></image>
+      </view>
+      <view class='cartt'>
+        <image class='carts' src='/imgs/ic_menu_shoping_nor.png'></image>
+      </view>
+    </view>
+    <view class='cart-r'>
+      <view class='buy'>立即购买</view>
+      <view class='joincart' bindtap='joincart'>加入购物车</view>
+    </view>
+  </view>
+
+  <!-- 产品描述都是图片 -->
+  <view class='mydescc'>
+    <import src="../../../../wxParse/wxParse.wxml" />
+   <template is="wxParse" data="{{wxParseData:mydesc.nodes}}" />
+  </view>
+</view>

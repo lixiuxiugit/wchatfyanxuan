@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "卓豆专题",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh":true,
+  "backgroundColor":"#000000",
+  "onReachBottomDistance":10
+}

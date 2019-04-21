@@ -1,0 +1,26 @@
+<!--pages/component/shoping/alertbox/alertbox.wxml-->
+<view class='alert-box'>
+<view class='mask' wx:if='{{isShow}}' bindtap='closemask'></view>
+<view class='content' animation='{{animation}}'>
+  <view class='content-top'>
+    <view class='c-top-l'>
+      <image src="http://yanxuan.nosdn.127.net/1f4758a9d68c5ebfafd3fc8b960707a6.jpg"></image>
+      <view class='c-top-l-dis'>
+         <text class='p-price'>价格￥46</text>
+         <text class='p-num'>请选择数量</text>
+      </view>
+    </view>
+    <view class='c-top-r' bindtap='closemask'>X</view>
+  </view>
+  <view class='content-bottom'>
+    <view class='b-top'>数量</view>
+    <view class='b-bottom'>
+        <view class='addsubbox'>
+            <text class='c-add' bindtap='add'>+</text>
+            <input value='{{inputValue}}' bindblur='changeValue'></input>
+            <view class='c-sub' bindtap='sub'>-</view>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

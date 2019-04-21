@@ -1,0 +1,107 @@
+<!--index.wxml-->
+<view class="index">
+  <!-- 搜索 -->
+  <view class='search'>
+    <view class="gdmap">{{address}}</view>
+    <view class="i-search">
+      <image src="/imgs/search.png"></image>
+      <input placeholder='搜索商品'></input>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class="sw" interval="2000" autoplay="true" indicator-dots="true">
+      <swiper-item wx:for="{{bannerList}}" wx:for-item="item1" wx:for-index="index1">
+        <image src="{{item1.image_url}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 家居导航 -->
+  <view class="jiaju">
+    <view wx:for="{{jiajuList}}" wx:for-item="item2" wx:for-index="index2" class="jiaju-item">
+      <image src="{{item2.icon_url}}"></image>
+      <text>{{item2.name}}</text>
+    </view>
+  </view>
+  <!-- 品牌制造商直供应 -->
+  <view class="brand">
+    <text class="bran-title">品牌制造商直供应</text>
+    <view class="brandlist">
+      <view wx:for="{{brandList}}" wx:for-item="item3" wx:for-index="index3" class='brand-item'>
+        <image src='{{item3.new_pic_url}}'></image>
+        <view class="bran-discribe">
+          <text>{{item3.name}}</text>
+          <text>{{item3.floor_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 新品首发 -->
+  <view class="newgoods">
+    <view class="negods-title">
+      <text class="ngsf">新品首发</text>
+      <text class="ngqb">查看全部</text>
+    </view>
+    <scroll-view class="newgodsList" scroll-x="true">
+      <view wx:for="{{newgoodList}}" wx:for-item="item4" wx:for-index="index4" class="newgods-item" bindtap='gotoDetail' data-id='{{item4.id}}'>
+        <image src="{{item4.list_pic_url}}"></image>
+        <text class="ng-title">{{item4.name}}</text>
+        <text class="ng-subtitle">{{item4.goods_brief}}</text>
+        <text class="ng-price">￥{{item4.retail_price}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 人气推广好物精选 -->
+  <view class="newgoods">
+    <view class="negods-title hotgoods">
+      <text class="ngsf">新品首发</text>
+      <text class="ngqb hotjx">查看全部</text>
+    </view>
+    <scroll-view class="newgodsList" scroll-x="true">
+      <view wx:for="{{hotgoodList}}" wx:for-item="item5" wx:for-index="index5" class="newgods-item">
+        <image src="{{item5.list_pic_url}}"></image>
+        <text class="ng-title">{{item5.name}}</text>
+        <text class="ng-subtitle">{{item5.goods_brief}}</text>
+        <text class="ng-price">￥{{item5.retail_price}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 专题精选 -->
+  <view class="newgoods">
+    <view class="topicsel">
+      <text>专题精选</text>
+      <image src="/imgs/right.png"></image>
+    </view>
+    <scroll-view class="newgodsList" scroll-x="true">
+      <view wx:for="{{topicList}}" wx:for-item="item6" wx:for-index="index6" class="newgods-item topicjx">
+        <image src="{{item6.item_pic_url}}"></image>
+        <view class="topicjx-disc">
+          <view class="topicjx-left">
+            <text class="ng-title topicjx-title">{{item6.title}}</text>
+            <text class="ng-subtitle topicjx-subtitle">{{item6.subtitle}}</text>
+          </view>
+          <view class="topicjx-right">
+            <text class="ng-price topicjx-price">{{item6.price_info}}元起</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 居家好物 -->
+  <view class="newCate">
+     <view class="newCate-item" wx:for="{{newCategoryList}}" wx:for-item="item7" wx:for-index="index7" >
+        <text class="newCate-title">{{item7.name}}好物</text>
+        <view class="newCate-item-total" > 
+            <view class="newCate-list" wx:for="{{item7.goodsList}}" wx:for-item="item8" wx:for-index="index8">
+              <image src="{{item8.list_pic_url}}"></image>
+              <text class='newCate-list-name'>{{item8.name}}</text>
+              <text class="newCate-list-price">￥{{item8.retail_price}}</text>
+            </view>
+            <view class="newCate-list lastlist">
+               <text>{{item7.name}}好物</text>
+               <image src="/imgs/icon_go_more.png"></image>
+            </view>
+        </view>
+     </view>
+  </view>
+</view>

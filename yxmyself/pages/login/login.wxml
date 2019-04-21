@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<view>
+   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">请登录</button>
+   <!-- <button bindtap='login'>登录</button> -->
+</view>
